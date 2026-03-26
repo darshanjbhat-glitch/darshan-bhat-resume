@@ -1,192 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darshan Bhat - Product Leader</title>
+    <!-- SEO meta tags -->
+    <meta name="description" content="Product Leader in Healthcare IT and GenAI space.">
+    <title>Darshan Bhat - Director Product Management</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="app-container">
-        <!-- Sidebar Navigation / Profile -->
-        <aside class="sidebar">
-            <div class="profile-header">
-                <h1 class="name">Darshan Bhat</h1>
-                <h2 class="title">Director-Level Product Leader</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">DB.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#impact">Strategic Impact</a>
+                <a href="#genai">GenAI Hub</a>
+                <a href="#casestudies">Case Studies</a>
+                <a href="#leadership">Leadership</a>
             </div>
-            
-            <div class="contact-info">
-                <a href="mailto:darshan.j.bhat@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> darshan.j.bhat@gmail.com</a>
-                <a href="tel:+917719925472" class="contact-item"><i class="fas fa-phone"></i> +91 77199 25472</a>
-                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</div>
-                <a href="https://linkedin.com/in/darshan-bhat-a8022339" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero / Profile (Light) -->
+    <header id="about" class="section-light slide-up">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Darshan Bhat</h1>
+                <h2 class="subtitle">Product Leader</h2>
+                <p class="summary" style="margin-bottom: 1.5rem;">Execution-driven Product Leader specialized in scaling
+                    organizations and driving cross-portfolio roadmaps. I build high-performance teams that align
+                    ruthlessly with organizational goals—pushing Product Owners to develop strong technical
+                    understanding along with functional workflows and problem-first thinking to consistently deliver
+                    cohesive, market-ready product
+                    suites.</p>
+                <p class="summary">As Chair of symplr's global GenAI working group, I spearhead the organizational shift
+                    to an AI-First mindset. By standardizing AI-assisted workflows, I drive widespread adoption that
+                    dramatically elevates requirement quality and accelerates the entire product lifecycle.</p>
+                <div class="contact-strip">
+                    <span><i class="fas fa-envelope"></i> darshan.j.bhat@gmail.com</span>
+                    <span><i class="fas fa-phone"></i> +91 77199 25472</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Bengaluru, IN</span>
+                    <a href="https://linkedin.com/in/darshan-bhat-a8022339" target="_blank"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
-        </aside>
+        </div>
+    </header>
 
-        <!-- Main Content Area -->
-        <main class="content">
-            <!-- Summary Section -->
-            <section id="summary" class="glass-panel slide-up">
-                <h3>Professional Summary</h3>
-                <p>Director-level Product Leader with a proven track record of driving cross-portfolio strategy, scaling product organizations, and leading transformational initiatives across globally distributed teams. Recognized for elevating product quality, maturing organizational capabilities, and championing GenAI-driven operating models that accelerate decision-making, improve delivery efficiency, and strengthen customer value across symplr’s healthcare product ecosystem.</p>
-            </section>
+    <!-- Executive Impact Carousel (Dark) -->
+    <section id="impact" class="section-dark slide-up">
+        <div class="container">
+            <h2 class="section-title">Strategic Impact</h2>
 
-            <!-- Skills Bento Box -->
-            <section id="skills" class="slide-up delay-1">
-                <h3>Executive Core Skills</h3>
-                <div class="bento-grid">
-                    <div class="bento-item">Product Strategy & Portfolio Leadership</div>
-                    <div class="bento-item">Org-wide Operating Models</div>
-                    <div class="bento-item">GenAI-driven Transformation</div>
-                    <div class="bento-item">Multi-product Roadmapping</div>
-                    <div class="bento-item">Cross-Functional Exec Alignment</div>
-                    <div class="bento-item">Scaled Discovery & Prioritization</div>
-                    <div class="bento-item">PM Capability Building</div>
-                    <div class="bento-item">Customer Value Realization</div>
-                    <div class="bento-item">Outcome-based Planning</div>
-                    <div class="bento-item">Healthcare IT Domain Leadership</div>
-                </div>
-            </section>
-
-            <!-- Experience Carousel -->
-            <section id="experience" class="slide-up delay-2">
-                <div class="section-header">
-                    <h3>Experience Focus</h3>
-                    <div class="carousel-controls">
-                        <button id="prevBtn" class="control-btn"><i class="fas fa-chevron-left"></i></button>
-                        <button id="nextBtn" class="control-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="impact-carousel" id="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="impact-number">80%</div>
+                        <h3 class="impact-heading">GenAI Adoption</h3>
+                        <p class="impact-text">Led a global transformation increasing GenAI adoption from 25% to 80% in
+                            6 months, yielding 10-15% time savings for 73 PMs/POs.</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="impact-number">20%</div>
+                        <h3 class="impact-heading">Requirement Excellence</h3>
+                        <p class="impact-text">Achieved ~20% fewer sprint bugs and ~15% faster design-to-development
+                            throughput by shifting quality upstream—using AI to validate requirements and deliver
+                            high-fidelity specifications to engineering.</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="impact-number"><i class="fas fa-users-cog"></i></div>
+                        <h3 class="impact-heading">AI-First Product Management Leadership</h3>
+                        <p class="impact-text">Directly mentor a 7-member Product organization to cultivate an AI-First
+                            mindset. Moving beyond basic functional workflows, I coach the team to deeply grasp
+                            underlying technical execution—ensuring they understand the 'what' and 'why' of engineering
+                            architecture and how it strategically impacts the roadmap.</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="impact-number">360&deg;</div>
+                        <h3 class="impact-heading">Suite Integration</h3>
+                        <p class="impact-text">Spearheaded the focused execution of symplr's core strategy to integrate
+                            multiple products across the suite. By bridging disparate workflows, we eliminated
+                            operational silos and delivered a cohesive, high-value ecosystem to healthcare providers.
+                        </p>
                     </div>
                 </div>
-                
-                <div class="carousel-container">
-                    <div class="carousel-track" id="carouselTrack">
-                        
-                        <!-- Slide 1 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Group Manager, Product Management</h4>
-                                    <span class="company">symplr – Bengaluru, IN</span>
-                                </div>
-                                <div class="date-badge">Aug 2018 – Present</div>
-                            </div>
-                            <p class="role-summary">Executive leader for symplr’s Quality & Safety portfolio, overseeing multi-product strategy, aligning cross-functional execution, and leading a 7-member Product Owners organization.</p>
-                            <ul class="achievements">
-                                <li>Own cross-portfolio planning and release governance, aligning UX, Architecture, Engineering, Support, and Customer teams.</li>
-                                <li>Drive multi-product integration strategy grounded in measurable customer value and platform scalability.</li>
-                                <li>Influence executive stakeholders across India and the US to align investment decisions and resource strategy.</li>
-                                <li>Run executive-level client collaboration forums to validate roadmap direction and shape enterprise adoption.</li>
-                            </ul>
-                        </div>
 
-                        <!-- Slide 2 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Org Maturity & Requirements Excellence</h4>
-                                    <span class="company">symplr Initiative</span>
-                                </div>
-                            </div>
-                            <ul class="achievements">
-                                <li>Shifted product org from feature-output mindset to problem-first framing, resulting in higher confidence decisions.</li>
-                                <li>Delivered ~20% fewer sprint bugs, ~15% faster design→development throughput.</li>
-                                <li>Instituted repeatable refinement, discovery, and prioritization frameworks improving predictability.</li>
-                            </ul>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Enterprise GenAI Transformation Leadership</h4>
-                                    <span class="company">symplr Initiative</span>
-                                </div>
-                            </div>
-                            <p class="role-summary">Chair of the global ‘GenAI for Product Management’ working group (73 PMs/POs).</p>
-                            <ul class="achievements">
-                                <li>Phase 1: Delivered playbook and enablement—adoption increased from 25% to 80% in 6 months. Enabled 10–15% time savings.</li>
-                                <li>Phase 2: Embedding GenAI into Aha!, Azure DevOps, and knowledge systems to standardize AI-assisted workflows.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Slide 4 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Workforce Management (WFM) Product Leadership</h4>
-                                    <span class="company">symplr Initiative</span>
-                                </div>
-                            </div>
-                            <ul class="achievements">
-                                <li>Served as senior PO for WFM scheduling solutions, shaping roadmap and influencing operational KPIs.</li>
-                                <li>Delivered workflow improvements reducing staffer scheduling effort and improving usability.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Slide 5 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Product Owner, Health TranZform™</h4>
-                                    <span class="company">Cognizant Technology Solutions</span>
-                                </div>
-                                <div class="date-badge">Dec 2016 – Jul 2018</div>
-                            </div>
-                            <ul class="achievements">
-                                <li>Led delivery for next-gen healthcare suite; managed stakeholder alignment and backlog strategy.</li>
-                                <li>Analyzed user impact and ensured cohesive feature definition across modules.</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Slide 6 -->
-                        <div class="carousel-slide glass-panel">
-                            <div class="role-header">
-                                <div>
-                                    <h4>Business Development</h4>
-                                    <span class="company">Cognizant Technology Solutions</span>
-                                </div>
-                                <div class="date-badge">Apr 2014 – Nov 2016</div>
-                            </div>
-                            <ul class="achievements">
-                                <li>Led RFPs, competitive analysis, and opportunity shaping for Healthcare BU.</li>
-                                <li>Created business-case frameworks later adopted across the organization.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="carousel-indicators" id="carouselIndicators"></div>
-                </div>
-            </section>
-
-            <div class="bottom-grid slide-up delay-3">
-                <!-- Education -->
-                <section id="education" class="glass-panel">
-                    <h3>Education</h3>
-                    <div class="edu-item">
-                        <h4>PGDM (Marketing)</h4>
-                        <p>Goa Institute of Management | 2012 – 2014</p>
-                    </div>
-                    <div class="edu-item">
-                        <h4>B.E.</h4>
-                        <p>R.N.S. Institute of Technology (VTU) | 2004 – 2008</p>
-                    </div>
-                </section>
-
-                <!-- Awards -->
-                <section id="awards" class="glass-panel">
-                    <h3>Awards & Leadership</h3>
-                    <ul class="awards-list">
-                        <li>Multiple quarterly awards for leadership and collaboration at symplr and Cognizant.</li>
-                        <li>Healthcare Associate of the Month – Cognizant Healthcare BU.</li>
-                        <li>Captain, Karnataka State Basketball – represented state & VTU nationally and internationally.</li>
-                    </ul>
-                </section>
+                <div class="carousel-indicators" id="carouselIndicators"></div>
             </div>
-            
-        </main>
-    </div>
+        </div>
+    </section>
+
+    <!-- GenAI Strategy Hub (Dark) -->
+    <section id="genai" class="section-dark slide-up">
+        <div class="container">
+            <h2 class="section-title">GenAI Strategy Hub</h2>
+            <div class="genai-grid">
+                <!-- Left: Process Diagram -->
+                <div class="genai-left process-list">
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-user-astronaut"></i></div>
+                        <div class="step-content">
+                            <h4>Phase 1: Enablement</h4>
+                            <p>Delivered maturity assessments, training programs, and a reusable prompts playbook for
+                                individual productivity.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="step-content">
+                            <h4>Phase 2: System Integration</h4>
+                            <p>Embedding GenAI into Aha!, Azure DevOps, and knowledge systems to standardize AI-assisted
+                                lifecycle workflows.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-robot"></i></div>
+                        <div class="step-content">
+                            <h4>Phase 3: AI Quality Agents</h4>
+                            <p>Engineered specialized AI agents to autonomously assess and validate the quality,
+                                completeness, and strategic alignment of product features.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Philosophy -->
+                <div class="genai-right">
+                    <h3>Drive AI-First Culture</h3>
+                    <p>True GenAI transformation in Product Management requires building an AI-First mindset. Our goal
+                        was widespread PM adoption—providing tooling that doesn't just improve
+                        efficiency, but fundamentally elevates product quality. By shifting to AI-assisted requirement
+                        writing, Product Management successfully supplemented the entire SDLC, delivering
+                        higher-confidence requirements to an AI-enabled engineering organization hungry for
+                        more advanced, high-impact work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Case Studies (Light) -->
+    <section id="casestudies" class="section-light slide-up">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--primary-color);">Product Case Studies</h2>
+            <div class="case-study-grid">
+                <!-- Case Study 1 -->
+                <div class="case-card">
+                    <h3>Workforce Management (symplr)</h3>
+                    <div class="case-section">
+                        <h4>The Why</h4>
+                        <p>WFM's core goal is having the right nurse at the right place at the right time. However,
+                            last-minute open shifts were extremely difficult to fill, directly impacting patient care.
+                        </p>
+                    </div>
+                    <div class="case-section">
+                        <h4>The How</h4>
+                        <p>Orchestrated cross-functional alignment (Engineering, UX, Support, Services) to completely
+                            reimagine how open shifts were promoted to nurses by introducing "reverse auctions."</p>
+                    </div>
+                    <div class="case-section highlight">
+                        <h4>The Win</h4>
+                        <p>Dramatically improved last-minute shift fill rates and reduced staffer scheduling effort,
+                            ensuring optimal patient care coverage while significantly lowering premium staffing costs
+                            for hospital networks.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-card">
+                    <h3>Midas Care Management (symplr)</h3>
+                    <div class="case-section">
+                        <h4>The Why</h4>
+                        <p>The core goal of Midas is to proactively manage clinical risk and patient safety. However,
+                            hospitals struggled with fragmented data, manual incident reporting, and complex compliance
+                            audits.</p>
+                    </div>
+                    <div class="case-section">
+                        <h4>The How</h4>
+                        <p>Orchestrated a cohesive multi-product strategy to streamline electronic workflows for case
+                            management, incident reporting, and real-time quality analytics.</p>
+                    </div>
+                    <div class="case-section highlight">
+                        <h4>The Win</h4>
+                        <p>Empowered healthcare organizations to seamlessly track adverse events and ensure Joint
+                            Commission audit readiness, fundamentally driving safer, data-driven patient outcomes.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 3: Ecosystem Integration -->
+                <div class="case-card integration-card">
+                    <h3>Enterprise Ecosystem Integration (symplr)</h3>
+                    <div class="integration-grid">
+                        <div class="case-section">
+                            <h4>The Why</h4>
+                            <p>A primary organizational goal was eliminating siloed healthcare operations. Fragmented
+                                products hindered workflows, creating massive friction for clinical and administrative
+                                teams.</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>The How</h4>
+                            <p>Championed a multi-product interoperability execution, collaborating seamlessly with
+                                internal stakeholders across engineering, UX, and architecture to build unified
+                                standards.</p>
+                        </div>
+                        <div class="case-section highlight">
+                            <h4>The Win</h4>
+                            <p>Successfully delivered multiple cross-product integrations, breaking down operational
+                                silos, drastically improving user experience, and driving measurable customer value
+                                across the portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Life Beyond Work (Light) -->
+    <section id="leadership" class="section-light slide-up">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--primary-color);">Life Beyond Product</h2>
+
+            <div class="life-beyond" style="width: 100%;">
+                <div class="basketball-card" style="margin-bottom: 2.5rem;">
+                    <i class="fas fa-basketball-ball"></i>
+                    <div>
+                        <h4>Captain, Karnataka State Basketball</h4>
+                        <p>My foundation for high-performance leadership wasn't built in a boardroom, but on the court.
+                            Representing Karnataka State and VTU both nationally and internationally instilled a deeply
+                            rooted understanding of team dynamics, discipline, and leading under pressure.</p>
+                    </div>
+                </div>
+
+                <div class="basketball-card">
+                    <i class="fas fa-running"></i>
+                    <div>
+                        <h4>A Continued Passion for Sports</h4>
+                        <p>Outside of driving product strategy, my love for sports and athletic competition continues to
+                            be a core pillar of my life. I strongly believe that the discipline, resilience, and
+                            collaborative mindset cultivated through sports are essential for long-term health and
+                            success - personally and professionally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Download FAB -->
+    <a href="javascript:window.print()" class="fab-pdf" title="Download PDF Resume">
+        <i class="fas fa-file-pdf"></i>
+    </a>
+
     <script src="script.js"></script>
 </body>
+
 </html>
