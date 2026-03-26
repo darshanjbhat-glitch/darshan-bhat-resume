@@ -558,6 +558,23 @@ h1, h2, h3, h4, h5 {
     .impact-number {
         font-size: 5rem;
     }
+
+    .carousel-arrow {
+        top: auto;
+        bottom: 10px;
+        transform: translateY(0);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .prev-arrow {
+        left: 1rem;
+    }
+
+    .next-arrow {
+        right: 1rem;
+    }
 }
 
 /* Print / PDF Styles */
