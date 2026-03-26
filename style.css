@@ -560,9 +560,9 @@ h1, h2, h3, h4, h5 {
     }
 
     .carousel-arrow {
-        top: auto;
-        bottom: 10px;
-        transform: translateY(0);
+        top: 6.5rem;
+        bottom: auto;
+        transform: translateY(-50%);
         width: 40px;
         height: 40px;
         background: rgba(255, 255, 255, 0.1);
