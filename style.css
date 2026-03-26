@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5 {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .carousel-slide {
@@ -605,10 +605,17 @@ h1, h2, h3, h4, h5 {
     }
 
     /* Ensure standard blocks don't collapse */
-    #about, #impact, #genai, #casestudies, #leadership {
+    #about, #impact, #casestudies, #leadership {
         display: block !important;
         width: 100% !important;
         page-break-inside: auto;
+    }
+
+    #genai {
+        display: block !important;
+        width: 100% !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
 
     /* Compress Spacing */
@@ -664,7 +671,9 @@ h1, h2, h3, h4, h5 {
         display: block !important;
         text-align: left;
         padding: 0 !important;
-        max-width: 100%;
+        max-width: 100% !important;
+        opacity: 1 !important;
+        transform: none !important;
         page-break-inside: avoid;
     }
     .impact-number { font-size: 2.2rem; margin-bottom: 0.2rem; text-align: left; color: black !important; text-shadow: none !important; }
@@ -686,13 +695,15 @@ h1, h2, h3, h4, h5 {
         display: grid !important;
         grid-template-columns: 1fr 1.5fr !important; 
         gap: 1.5rem !important; 
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
     
-    .process-step { margin-bottom: 0.5rem; }
+    .process-step { margin-bottom: 0.5rem; page-break-inside: avoid !important; break-inside: avoid !important; }
     .step-icon { width: 30px; height: 30px; font-size: 1rem; border-radius: 6px; color: black !important; background: white !important; border: 1px solid #ccc !important;}
     .step-content h4 { font-size: 1rem; margin-bottom: 0.2rem; color: black !important; }
     .step-content p { font-size: 8.5pt; margin-bottom: 0; color: #333 !important;}
-    .genai-right { padding: 1rem !important; border-left: 2px solid black !important; }
+    .genai-right { padding: 1rem !important; border-left: 2px solid black !important; page-break-inside: avoid !important; break-inside: avoid !important; }
     .genai-right h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: black !important;}
     .genai-right p { font-size: 9pt; color: #333 !important; }
 

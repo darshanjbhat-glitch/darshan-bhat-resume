@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCarousel() {
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
         Array.from(indicatorsContainer.children).forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
@@ -76,8 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function startTimer() {
-        // 6000ms = 6 seconds per user spec
-        timer = setInterval(nextSlide, 6000);
+        // Pause for 10 seconds before auto-sliding so visitors have time to read
+        timer = setInterval(nextSlide, 10000);
     }
 
     function resetTimer() {
@@ -88,5 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     carouselContainer.addEventListener('mouseenter', () => clearInterval(timer));
     carouselContainer.addEventListener('mouseleave', startTimer);
 
+    updateCarousel(); // Initialize center framing
     startTimer();
 });
