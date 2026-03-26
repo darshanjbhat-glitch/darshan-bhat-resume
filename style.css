@@ -260,6 +260,38 @@ h1, h2, h3, h4, h5 {
     border-radius: 6px;
 }
 
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 229, 255, 0.15);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
 /* GenAI Hub */
 .genai-grid {
     display: grid;
@@ -453,7 +485,7 @@ h1, h2, h3, h4, h5 {
 
 .basketball-card p {
     color: #666;
-    max-width: 500px;
+    max-width: 100%;
 }
 
 /* FAB */
@@ -526,4 +558,144 @@ h1, h2, h3, h4, h5 {
     .impact-number {
         font-size: 5rem;
     }
+}
+
+/* Print / PDF Styles */
+@media print {
+    @page { margin: 0.5cm; size: A4; }
+    body {
+        font-size: 9pt;
+        line-height: 1.4;
+        background-color: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: black !important;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    /* Force all animations to be visible */
+    .slide-up, .slide-up.visible {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Hide Web UI */
+    .navbar, .fab-pdf, .carousel-indicators, .carousel-arrow, .hamburger {
+        display: none !important;
+    }
+
+    /* Ensure standard blocks don't collapse */
+    #about, #impact, #genai, #casestudies, #leadership {
+        display: block !important;
+        width: 100% !important;
+        page-break-inside: auto;
+    }
+
+    /* Compress Spacing */
+    .section-light, .section-dark {
+        padding: 1rem 0 !important;
+        min-height: 0 !important;
+        background: white !important;
+        border: none !important;
+    }
+    
+    /* Dark Print Header */
+    #about { 
+        padding: 1.5rem !important; 
+        min-height: 0 !important;
+        background: var(--primary-color) !important; 
+        border-radius: 8px !important;
+        margin-bottom: 1rem !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    .section-title { font-size: 1.4rem; margin-bottom: 1rem !important; color: black !important; }
+    .section-title::after { bottom: -6px !important; }
+    
+    .hero-content h1 { font-size: 2.2rem; margin-bottom: 0; color: white !important; }
+    .subtitle { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-color) !important; }
+    .summary { font-size: 9.5pt; margin-bottom: 0.5rem !important; max-width: 100%; color: #eee !important; }
+    .contact-strip { gap: 1rem; margin-bottom: 0; }
+    .contact-strip span, .contact-strip a { color: white !important; }
+    .contact-strip i { color: var(--accent-color) !important; }
+
+    /* Force Backgrounds to White for pure clean PDF */
+    .impact-carousel, .genai-right, .step-icon {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ccc !important;
+    }
+
+    /* Flatten Carousel into 4-column Grid */
+    .impact-carousel {
+        padding: 1rem !important;
+        border-radius: 8px;
+        box-shadow: none !important;
+    }
+    .carousel-track {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 1rem !important;
+        transform: none !important;
+        transition: none !important;
+        width: 100% !important;
+    }
+    .carousel-slide {
+        display: block !important;
+        text-align: left;
+        padding: 0 !important;
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+    .impact-number { font-size: 2.2rem; margin-bottom: 0.2rem; text-align: left; color: black !important; text-shadow: none !important; }
+    .impact-heading { font-size: 1rem; margin-bottom: 0.2rem; text-align: left; color: black !important; }
+    .impact-text { font-size: 8.5pt; text-align: left; color: #333 !important; }
+
+    /* Override Mobile Grids & Compress */
+    .case-study-grid { 
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr !important; 
+        gap: 1rem !important; 
+    }
+    .integration-grid { 
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 1rem !important;
+    }
+    .genai-grid { 
+        display: grid !important;
+        grid-template-columns: 1fr 1.5fr !important; 
+        gap: 1.5rem !important; 
+    }
+    
+    .process-step { margin-bottom: 0.5rem; }
+    .step-icon { width: 30px; height: 30px; font-size: 1rem; border-radius: 6px; color: black !important; background: white !important; border: 1px solid #ccc !important;}
+    .step-content h4 { font-size: 1rem; margin-bottom: 0.2rem; color: black !important; }
+    .step-content p { font-size: 8.5pt; margin-bottom: 0; color: #333 !important;}
+    .genai-right { padding: 1rem !important; border-left: 2px solid black !important; }
+    .genai-right h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: black !important;}
+    .genai-right p { font-size: 9pt; color: #333 !important; }
+
+    .case-card, .integration-card, .life-beyond {
+        padding: 1rem !important;
+        page-break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid rgba(0,0,0,0.2) !important;
+        border-radius: 8px !important;
+        background: white !important;
+    }
+    .case-card h3, .integration-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; padding-bottom: 0.5rem; color: black !important; border-bottom: 1px solid #ccc; }
+    .case-section { margin-bottom: 0.5rem; }
+    .case-section.highlight { padding: 0.5rem !important; background: #fdfdfd !important; border-left: 3px solid black !important; border-radius: 4px; }
+    .case-section h4 { font-size: 0.75rem; margin-bottom: 0.2rem; color: black !important; }
+    .case-section p { font-size: 8.5pt; margin-bottom: 0; color: #333 !important; }
+    
+    .life-beyond { margin-top: 1rem; border: 1px solid #ccc; }
+    .basketball-card { gap: 1rem; margin-bottom: 0.5rem !important; }
+    .basketball-card i { font-size: 1.5rem; color: black !important; }
+    .basketball-card h4 { font-size: 1rem; color: black !important; }
+    .basketball-card p { font-size: 8.5pt; color: #333 !important; }
 }

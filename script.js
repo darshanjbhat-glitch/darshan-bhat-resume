@@ -60,6 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     }
 
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+
+    document.getElementById('nextSlideBtn').addEventListener('click', () => {
+        nextSlide();
+        resetTimer();
+    });
+
+    document.getElementById('prevSlideBtn').addEventListener('click', () => {
+        prevSlide();
+        resetTimer();
+    });
+
     function startTimer() {
         // 6000ms = 6 seconds per user spec
         timer = setInterval(nextSlide, 6000);
